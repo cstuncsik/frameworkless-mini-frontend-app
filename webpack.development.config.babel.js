@@ -1,3 +1,4 @@
+import autoprefixer from 'autoprefixer';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ReloadHtmlWebpackPlugin from 'reload-html-webpack-plugin';
 
@@ -27,5 +28,6 @@ export default {
                 loaders: ['style', 'css?sourceMap', 'postcss?browsers=last 2 versions', 'sass?sourceMap']
             }
         ]
-    }
+    },
+    postcss: () => [autoprefixer]
 };

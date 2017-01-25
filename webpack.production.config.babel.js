@@ -1,3 +1,4 @@
+import autoprefixer from 'autoprefixer';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const contentBase = './src';
@@ -30,5 +31,6 @@ export default {
                 loaders: ['style', 'css', 'postcss?browsers=last 2 versions', 'sass']
             }
         ]
-    }
+    },
+    postcss: () => [autoprefixer]
 };
